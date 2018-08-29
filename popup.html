@@ -2,15 +2,37 @@
   <html>
     <head>
       <style>
-        
+        #searchField{
+          border:1px solid orangered;
+          height: 24px;
+          padding-left: 5px;
+          display: inline-block;
+        }
+        #searchButton{
+          border:none;
+          height: 20px;
+          margin-right: 10px;
+          cursor:pointer;
+          background: orangered;
+          color: white;
+          display: inline-block;
+        }
+        #searchButton:focus{
+          outline-width: thin;
+        }
+        div{
+          overflow: hidden;
+          white-space: nowrap;
+        }
       </style>
     </head>
     <body id="page">
-      <div id="subDir">Search:</div>
-      <form>
-        <input id="searchField" type="name" placeholder="reddit...">
-        <input id="searchButton" type="submit" value="Submit">
-      </form>
+      <div>
+        <form>
+          <input id="searchField" type="name" placeholder="reddit...">
+          <input id="searchButton" type="submit" value="SEARCH">
+        </form>
+      </div>
       <script src="popup.js"></script>
     </body>
   </html>
