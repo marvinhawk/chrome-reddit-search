@@ -9,14 +9,14 @@ let subURL = ""
 popup.onload = function() {
 	console.log("Popup loaded!")
 	chrome.tabs.query({'active': true, 'windowId': chrome.windows.WINDOW_ID_CURRENT}, function(tabs){
-   	  let subName = /r\/.*?(?=\/)/
+   	  let subName = /\/(r\/.*?)(?=\/)/
    	  curSub = subName.exec(tabs[0].url)
       if (curSub){
-      	console.log(curSub[0])
-      	subURL = curSub[0]
-      	searchField.placeholder = curSub[0]
+      	console.log(curSub[1])
+      	subURL = curSub[1]
+      	searchField.placeholder = curSub[1]
       } else {
-      	console.log("Called before page load")
+      	console.log("No match for subreddit in URL")
       }      
    });
 };
