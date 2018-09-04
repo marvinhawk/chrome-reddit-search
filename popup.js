@@ -7,7 +7,6 @@ let searchField = document.getElementById("searchField")
 let subURL = ""
 
 popup.onload = function() {
-	console.log("Popup loaded!")
 	chrome.tabs.query({'active': true, 'windowId': chrome.windows.WINDOW_ID_CURRENT}, function(tabs){
    	  let subName = /\/(r\/.*?)(?=\/)/
    	  curSub = subName.exec(tabs[0].url)
@@ -22,7 +21,6 @@ popup.onload = function() {
 };
 
 searchButton.onclick = function() {
-	console.log("Search button clicked.")
 	query = searchField.value
 	let baseURL = "https://www.google.com/search?q=site%3Areddit.com/";
 	let URL = baseURL + subURL + "+" + query

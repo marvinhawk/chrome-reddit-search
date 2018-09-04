@@ -1,7 +1,7 @@
 {
-    "name": "Google Search reddit",
+    "name": "Sub Search",
     "version": "1.0",
-    "description": "Search reddit using Google Search",
+    "description": "Search subreddits using Google Search",
     "permissions": ["activeTab", "declarativeContent"],
     "background": {
       "scripts": ["background.js"],
@@ -9,7 +9,7 @@
     },
     "page_action": {
       "default_popup": "popup.html",
-      "default_title": "Press Ctrl/Cmd+Shift+Z to open",
+      "default_title": "Press Ctrl/Cmd+Shift+Z to search",
       "default_icon": {
         "16": "images/search_icon16.png",
         "32": "images/search_icon32.png",
@@ -22,7 +22,7 @@
         "suggested_key": {
           "default": "Ctrl+Shift+Z"
         },
-        "description": "Open extension"
+        "description": "Open search"
       }
     },
     "icons": {
