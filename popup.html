@@ -17,8 +17,10 @@
           color: white;
           display: inline-block;
         }
-        #searchButton:focus{
-          outline-width: thin;
+        #searchField:focus, #searchButton:focus{
+          
+          outline: 2px solid orangered;
+
         }
         div{
           overflow: hidden;
@@ -29,8 +31,8 @@
     <body id="page">
       <div>
         <form>
-          <input id="searchField" type="name" placeholder="reddit..." autofocus>
-          <input id="searchButton" type="submit" value="SEARCH">
+          <input id="searchField" type="name" placeholder="reddit..." autofocus autocomplete="off"/>
+          <input id="searchButton" type="submit" value="SEARCH"/>
         </form>
       </div>
       <script src="popup.js"></script>
